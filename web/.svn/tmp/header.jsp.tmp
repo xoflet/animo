@@ -1,0 +1,78 @@
+<jsp:useBean id="personne" class="cnam.nfe114.Personne" scope="session"/>
+<%
+int steplogin = (int) personne.getStepLogin();
+%>
+
+<<<<<<< .mine
+    <div class="header">
+        <div class="logo"><a href="AnimalServlet"><img src="images/logo.gif" alt="" title="MOI" border="0" /></a></div>
+        <div id="menu">
+            <ul>
+            <li class="selected"><a href="AnimalServlet">Accueil</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Qui sommes-nous</a></li>
+            <li class="divider"></li>
+            <li><a href="AnimoSearch">Recherche</a></li
+=======
+
+<div class="header">
+    <div class="logo"><a href="index.jsp"><img src="images/logo.gif" alt="" title="MOI" border="0" /></a></div>
+    <div id="menu">
+        <ul>
+        <li class="selected"><a href="index.jsp">Accueil</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Qui sommes-nous</a></li>
+        <li class="divider"></li>
+        <li><a href="search.jsp">Recherche</a></li>
+
+
+        <!--login-->
+        <% if(steplogin!=2) {
+            if(steplogin!=1) {
+        %>
+>>>>>>> .r95
+            <li>
+                <form name="Login" action="AnimoLogin">
+                    <input type="hidden" name="login_menu" value="1"/>
+                    <input type="submit" class="login_btn" value="ok" />
+                    <input type="text" class="login_input" name="login"/>
+                    <label class="login_input">Login :</label>
+                </form>
+            </li>
+            <% } else
+                {
+            %>
+            <li>
+                <form name="Login" action="AnimoLogin">
+                    <input type="hidden" name="login_menu" value="2"/>
+                    <input type="submit" class="login_btn" value="ok" />
+                    <input type="text" class="login_input" name="motDePasse"/>
+                    <label class="login_input">Mot de passe :</label>
+                </form>
+            </li>
+            <%
+
+                }
+
+            %>
+            <li class="divider_right"></li>
+            <li class="identif"><a  href="AnimoServlet"> S'identifier</a></li>
+            
+        <% } else
+            {
+        %>
+
+                <!--logon-->
+                <li class="login"><a href="#">Bonjour <%=personne.getDesignation()%> <%=personne.getNom()%></a></li>
+                <li class="divider_right"></li>
+                <li class="identif"><a href="AnimoServlet">Deconnexion</a></li>
+
+        <%
+            }
+        %>
+
+
+        </ul>
+    </div>
+</div>
+  

@@ -1,0 +1,62 @@
+<%-- 
+    Document   : index
+    Created on : 10 nov. 2010, 00:52:39
+    Author     : john
+ <%response.setHeader("Pragma","no-cache"); response.setHeader("Cache-Control"),"no-cache"); response.setHeader("Cache-Control","doit_revalider"); response.setDateHeader("Expires",0);%>
+
+--%>
+<jsp:useBean id="personne" class="cnam.nfe114.Personne" scope="session"/>
+<% 
+if (personne.getNom() == null ) {
+    response.sendRedirect("index.jsp");
+ }
+%>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<title>Animo</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+<div id="wrap">
+
+    <div class="header">
+        <div class="logo"><a href="AnimalServlet"><img src="images/logo.gif" alt="" title="MOI" border="0" /></a></div>
+        <div id="menu">
+            <ul>
+            <li class="selected"><a href="AnimalServlet">Accueil</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Qui sommes-nous</a></li>
+            <li class="divider"></li>
+            <li><a href="search.jsp">Recherche</a></li>
+
+            
+            <li class="login"><a href="#">Bonjour <%=personne.getDesignation()%> <%=personne.getNom()%></a></li>
+            <li class="divider_right"></li>
+            <li class="identif"><a href="AnimoServlet">Deconnexion</a></li>
+            </ul>
+        </div>        
+         
+        
+    </div>
+
+    <div class="center_content">
+
+        <jsp:include page="rightcontent.jsp" />
+
+        <div class="right_content">
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <jsp:include page="footer.jsp" />
+
+</div>
+
+</body>
+</html>

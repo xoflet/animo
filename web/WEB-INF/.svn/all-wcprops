@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/animo~source-code-repository-animo/!svn/ver/84/Animo/web/WEB-INF
+END
+sun-web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/animo~source-code-repository-animo/!svn/ver/2/Animo/web/WEB-INF/sun-web.xml
+END
+struts-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/animo~source-code-repository-animo/!svn/ver/84/Animo/web/WEB-INF/struts-config.xml
+END
+validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/animo~source-code-repository-animo/!svn/ver/84/Animo/web/WEB-INF/validation.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/animo~source-code-repository-animo/!svn/ver/122/Animo/web/WEB-INF/web.xml
+END
+validator-rules.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/animo~source-code-repository-animo/!svn/ver/84/Animo/web/WEB-INF/validator-rules.xml
+END
+tiles-defs.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/animo~source-code-repository-animo/!svn/ver/84/Animo/web/WEB-INF/tiles-defs.xml
+END
